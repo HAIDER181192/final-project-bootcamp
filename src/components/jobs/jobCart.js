@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography, Button, makeStyles } from "@material-ui/core";
-import { differenceInBusinessDays, differenceInMinutes } from "date-fns";
+import { differenceInBusinessDays} from "date-fns";
 
 export default function JobListing(props) {
   const classes = makeStyles((theme) => ({
@@ -62,7 +62,7 @@ export default function JobListing(props) {
           </Grid>
           <Grid item>
             <Box mt={1}>
-              <Button variant="contained" color="primary">
+              <Button  onClick={props.open} variant="contained" color="primary">
                 Check
               </Button>
             </Box>
