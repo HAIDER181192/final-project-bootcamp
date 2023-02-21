@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography, Button, makeStyles } from "@material-ui/core";
-import { differenceInMinutes } from "date-fns";
+import { differenceInBusinessDays, differenceInMinutes } from "date-fns";
 
 export default function JobListing(props) {
   const classes = makeStyles((theme) => ({
@@ -56,7 +56,7 @@ export default function JobListing(props) {
         <Grid item container direction="column" xs>
           <Grid item>
             <Typography variant="caption">
-              {differenceInMinutes(Date.now(), props.postedOn)} min ago |{" "}
+              {differenceInBusinessDays(Date.now(), props.postedOn)}days|{" "}
               {props.type} | {props.location}
             </Typography>
           </Grid>
